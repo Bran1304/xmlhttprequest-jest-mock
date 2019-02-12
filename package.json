@@ -1,0 +1,48 @@
+{
+  "name": "xmlhttprequest-jest-mock",
+  "version": "1.0.0",
+  "description": "XMLHttpRequest mock for jest",
+  "author": "Erdem Bircan",
+  "license": "MIT",
+  "main": "dist/xmlhttprequest-jest-mock-common.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/erdembircan/xmlhttprequest-jest-mock"
+  },
+  "files": [
+    "dist/*.js"
+  ],
+  "keywords": [
+    "jest",
+    "xmlhttprequest",
+    "mock",
+    "test"
+  ],
+  "scripts": {
+    "test:unit:Dev": "jest --verbose --watchAll",
+    "test:unit": "jest",
+    "lint": "eslint src",
+    "test": "npm run test:unit && npm run lint",
+    "build:Dev": "rollup -w -c build/rollup.dev.config.js",
+    "build": "node ./build/index.js"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.2.2",
+    "@babel/preset-env": "^7.3.1",
+    "babel-jest": "^24.1.0",
+    "eslint": "^5.13.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.16.0",
+    "jest": "^24.1.0",
+    "rollup": "^1.1.2",
+    "rollup-plugin-buble": "^0.19.6",
+    "rollup-plugin-commonjs": "^9.2.0",
+    "rollup-plugin-node-resolve": "^4.0.0"
+  },
+  "jest": {
+    "testRegex": "__tests__/.+\\.test\\.js$",
+    "transform": {
+      "^.+\\.(js)$": "babel-jest"
+    }
+  }
+}
